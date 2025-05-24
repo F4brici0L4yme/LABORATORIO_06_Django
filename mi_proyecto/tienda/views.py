@@ -18,3 +18,6 @@ def crear_venta(request):
 def lista_ventas(request):
     ventas = Venta.objects.all()
     return render(request, 'tienda/lista_ventas.html', {'ventas': ventas})
+
+def crear_venta(request):
+    return render(request, 'tienda/crear_venta.html')
