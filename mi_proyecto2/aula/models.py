@@ -20,4 +20,4 @@ class Nota(models.Model):
     nota = models.DecimalField(max_digits=5, decimal_places=2)
 
     def __str__(self):
-        return f"{self.alumno.nombre} - {self.curso.nombre}: {self.nota}"
+        return f"{self.alumno.nombreAlumno} - {self.curso.nombreCurso}: {self.nota}"
