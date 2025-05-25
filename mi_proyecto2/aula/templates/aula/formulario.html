@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head><title>{{ titulo }}</title></head>
+<body>
+    <h1>{{ titulo }}</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Guardar</button>
+    </form>
+    <a href="{% url 'lista_notas' %}">Ver Notas</a>
+</body>
+</html>
