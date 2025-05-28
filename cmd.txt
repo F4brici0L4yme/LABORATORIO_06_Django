@@ -1,0 +1,33 @@
+PASOS REALIZADOS:
+1. Cree un ambiente virtual para esta práctica.
+2. Instale Django en el ambiente virtual.
+3. Cree un directorio se inicialice un repositorio git en el y cree un proyecto github y enlácelos.
+4. Cree un archivo .gitignore según este repositorio 
+5. Crear un proyecto en Django que maneje una tabla de Productos y una tabla de Ventas
+6. Crear las apps necesarias en Django
+7. Crear las vistas y formularios necesarios en Django para que se pueda ingresar una venta de varios productos.
+
+EJERCICIO RESUELTO:
+mkdir LABORATORIO_6
+cd LABORATORIO_6
+python -m venv env
+env/Scripts/activate
+pip install django //dentro de entorno virtual
+
+ django-admin startproject mi_proyecto //dentro de entorno virtual
+ cd mi_proyecto
+ dir //comprobamos que esta manage.py
+ python manage.py startapp tienda //Se agrega tambien la app en settings.py de mi_proyecto/mi_proyecto
+ //se define el modelo Producto y Venta en models.py de la aplicación tienda
+ //primero, se registran los modelos en admin.py de tienda/
+ //para luego crear y aplicar las migraciones
+ python manage.py makemigrations tienda
+ python manage.py migrate
+ //se crea un formulario para ingresar ventas en forms.py de la aplicación tienda
+ //se crea vistas para manejar el formulario de ventas en views.py de la aplicación tienda
+ //se crea una plantilla crear_venta.html y lista_ventas.html en el directorio templates/tienda/ en tienda/
+ //se crea urls.py en tienda/ configurando las urls en ese archivo
+ //se incluyen las URLs de la aplicación tienda en el archivo urls.py del proyecto
+ python manage.py runserver 127.0.0.1:8147
+ //Ctrl C
+ python manage.py createsuperuser
